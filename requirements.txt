@@ -1,0 +1,5 @@
+flask
+ultralytics
+opencv-python
+sqlalchemy
+flask_sqlalchemy

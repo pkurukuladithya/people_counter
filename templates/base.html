@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>{% block title %}People Counter{% endblock %}</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-$END$
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-gray-800 text-white p-4 flex justify-between">
+        <div class="font-bold text-lg">YOLO People Counter</div>
+        <div class="space-x-4">
+            <a href="{{ url_for('index') }}" class="hover:underline">Live</a>
+            <a href="{{ url_for('history') }}" class="hover:underline">History</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4">
+        {% block content %}{% endblock %}
+    </main>
 </body>
 </html>
